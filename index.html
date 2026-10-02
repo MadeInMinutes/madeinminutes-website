@@ -1,0 +1,301 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MadeInMinutes — Living & Still Learning. A real trading journey through the NAS100 markets.">
+  <title>MadeInMinutes | Living & Still Learning</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #0b100e;
+      color: #f3f6ef;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 8%;
+      border-bottom: 1px solid #253029;
+    }
+
+    .logo {
+      font-size: 21px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: #b9f36a;
+    }
+
+    nav a {
+      color: #d2d9d3;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #b9f36a;
+    }
+
+    .hero {
+      min-height: 78vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 90px 10%;
+      background:
+        linear-gradient(90deg, #0b100e 10%, rgba(11,16,14,.88) 60%, rgba(11,16,14,.5)),
+        url("https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+    }
+
+    .tag {
+      color: #b9f36a;
+      border: 1px solid #526a3e;
+      border-radius: 30px;
+      padding: 7px 15px;
+      font-size: 12px;
+      letter-spacing: 2px;
+      margin-bottom: 28px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 82px);
+      line-height: 1.08;
+      max-width: 850px;
+      margin-bottom: 22px;
+    }
+
+    h1 span {
+      color: #b9f36a;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      color: #c4cec5;
+      margin-bottom: 14px;
+    }
+
+    .description {
+      max-width: 570px;
+      color: #aab5ad;
+      font-size: 16px;
+      margin-bottom: 32px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      padding: 13px 22px;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 14px;
+      transition: .2s;
+    }
+
+    .primary {
+      color: #10180c;
+      background: #b9f36a;
+    }
+
+    .primary:hover {
+      background: #d0ff91;
+      transform: translateY(-2px);
+    }
+
+    .secondary {
+      color: #f3f6ef;
+      border: 1px solid #67736a;
+    }
+
+    .secondary:hover {
+      border-color: #b9f36a;
+      color: #b9f36a;
+    }
+
+    section {
+      padding: 80px 10%;
+    }
+
+    .section-title {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .section-intro {
+      color: #aab5ad;
+      max-width: 600px;
+      margin-bottom: 35px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: #141c17;
+      border: 1px solid #29362d;
+      border-radius: 10px;
+      padding: 28px;
+    }
+
+    .card .symbol {
+      color: #b9f36a;
+      font-size: 26px;
+      margin-bottom: 14px;
+    }
+
+    .card h3 {
+      font-size: 19px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #aab5ad;
+      font-size: 14px;
+    }
+
+    .quote {
+      text-align: center;
+      background: #111813;
+      border-top: 1px solid #26332b;
+      border-bottom: 1px solid #26332b;
+    }
+
+    .quote h2 {
+      font-size: clamp(26px, 4vw, 42px);
+      color: #b9f36a;
+      margin-bottom: 10px;
+    }
+
+    .quote p {
+      color: #aab5ad;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 15px;
+      color: #87948b;
+      font-size: 12px;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        padding: 18px 5%;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-right: 15px;
+      }
+
+      .hero {
+        padding: 75px 7%;
+        min-height: 70vh;
+      }
+
+      section {
+        padding: 60px 7%;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">MADEIN<span>MINUTES</span></div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#journey">Journey</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="tag">FUTURES &bull; NAS100</div>
+      <h1>SAME PROCESS.<br><span>NEW DAY.</span></h1>
+      <p class="subtitle">Living & Still Learning.</p>
+      <p class="description">
+        A real trading journey through the markets.
+        Documenting the setups, the wins, the losses
+        and the lessons learned along the way.
+      </p>
+      <div class="buttons">
+        <a class="btn primary" href="#journey">Explore the Journey ↗</a>
+        <a class="btn secondary" href="#about">Discover MadeInMinutes</a>
+      </div>
+    </section>
+
+    <section id="journey">
+      <h2 class="section-title">The Journey</h2>
+      <p class="section-intro">
+        Trading is more than finding an entry.
+        It's about discipline, patience, risk management
+        and learning from every session.
+      </p>
+
+      <div class="cards">
+        <div class="card">
+          <div class="symbol">↗</div>
+          <h3>The Setups</h3>
+          <p>Exploring NAS100 price action, liquidity,
+          market structure and the trading process.</p>
+        </div>
+
+        <div class="card">
+          <div class="symbol">◈</div>
+          <h3>The Trade Recaps</h3>
+          <p>Real trading sessions, including wins,
+          losses, missed opportunities and breakevens.</p>
+        </div>
+
+        <div class="card">
+          <div class="symbol">◎</div>
+          <h3>The Lessons</h3>
+          <p>Reviewing decisions, refining the process
+          and documenting the journey of improvement.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote" id="about">
+      <h2>Living & Still Learning.</h2>
+      <p>Every session is an opportunity to learn.
+      Every day is another chance to follow the process.</p>
+    </section>
+  </main>
+
+  <footer>
+    MADEINMINUTES &copy; 2026 &mdash; LIVING & STILL LEARNING
+  </footer>
+
+</body>
+</html>
